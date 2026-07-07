@@ -5,12 +5,12 @@
     /* Colors - Luxury Palette */
     --clr-primary: #C5A265; /* Elegant Gold */
     --clr-primary-dark: #A38045;
-    --clr-secondary: #1A1A1A; /* Deep Charcoal */
-    --clr-dark: #0F0F0F;
+    --clr-secondary: #112A46; /* Royal Blue */
+    --clr-dark: #0A1930; /* Deep Midnight Navy Blue */
     --clr-light: #F8F9FA;
     --clr-white: #FFFFFF;
     --clr-text: #4A4A4A;
-    --clr-text-light: #888888;
+    --clr-text-light: #AAB7CB; /* Soft blue-grey for readable light text on dark backgrounds */
     
     /* Typography */
     --ff-primary: 'Outfit', sans-serif;

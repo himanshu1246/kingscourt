@@ -567,6 +567,75 @@ img {
 }
 
 /* ==========================================================================
+   Pricing Section
+   ========================================================================== */
+.pricing {
+    padding: var(--section-padding);
+    background-color: var(--clr-light);
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 20px 0 40px; /* Extra bottom padding for overlapping buttons */
+}
+
+.pricing-card {
+    background-color: #F9F9F9;
+    border-radius: var(--radius-md);
+    position: relative;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    border: 1px solid rgba(0,0,0,0.05);
+    padding: 40px 20px 50px;
+    margin-bottom: 20px;
+    transition: var(--transition);
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.pricing-content h2 {
+    font-size: 2.2rem;
+    color: var(--clr-secondary);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.price-highlight {
+    font-size: 1.8rem;
+    color: var(--clr-primary);
+    font-weight: 700;
+}
+
+.pricing-btn {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #9C7D40; /* Darker gold/bronze */
+    color: var(--clr-white);
+    border: 2px solid #333; /* Dark border as per image */
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 500;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.pricing-btn:hover {
+    background-color: var(--clr-secondary);
+    color: var(--clr-primary);
+    border-color: var(--clr-primary);
+}
+
+/* ==========================================================================
    Floor Plans Section
    ========================================================================== */
 .floor-plans {

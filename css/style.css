@@ -5,12 +5,12 @@
     /* Colors - Luxury Palette */
     --clr-primary: #C5A265; /* Elegant Gold */
     --clr-primary-dark: #A38045;
-    --clr-secondary: #1A1A1A; /* Deep Charcoal */
-    --clr-dark: #0F0F0F;
+    --clr-secondary: #7B2C28; /* Rich Maroon extracted exactly from the logo */
+    --clr-dark: #4A1A18; /* Deep Burgundy for sophisticated dark sections */
     --clr-light: #F8F9FA;
     --clr-white: #FFFFFF;
     --clr-text: #4A4A4A;
-    --clr-text-light: #888888;
+    --clr-text-light: #E8D5D5; /* Soft reddish-grey for light text on burgundy */
     
     /* Typography */
     --ff-primary: 'Outfit', sans-serif;
@@ -781,13 +781,15 @@ footer {
     display: none;
     position: fixed;
     z-index: 2000;
-    padding-top: 50px;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.9);
     backdrop-filter: blur(5px);
+    overflow-y: auto; /* Allow scrolling if content is taller than screen */
+    padding-top: 50px;
+    padding-bottom: 50px; /* Add padding to bottom so it doesn't stick to the edge when scrolling */
 }
 
 .modal-content {
@@ -842,15 +844,13 @@ footer {
 /* Popup Modal Styles */
 .popup-content {
     background-color: var(--clr-white);
-    margin: auto;
+    margin: 0 auto; /* Removed 50px margin since padding is on .modal */
     padding: 30px;
     border-radius: var(--radius-lg);
     max-width: 500px;
     width: 90%;
     box-shadow: var(--shadow-lg);
     position: relative;
-    top: 50%;
-    transform: translateY(-50%);
     animation: zoomIn 0.3s ease;
 }
 
@@ -901,6 +901,9 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .popup-content {
+        padding: 20px; /* Give more breathing room for inputs on very small screens */
+    }
     .whatsapp-float {
         width: 50px;
         height: 50px;

@@ -4,19 +4,11 @@ document.addEventListener('DOMContentLoaded', () => {
         gsap.registerPlugin(ScrollTrigger);
 
         /* ==========================================
-           Cinematic Hero Load
+           Parallax Hero Effect (Disabled to prevent image cropping/zooming)
            ========================================== */
-        gsap.fromTo('.hero-bg img', 
-            { scale: 1.15, filter: 'brightness(0.5)' }, 
-            { scale: 1, filter: 'brightness(1)', duration: 3, ease: 'power2.out' }
-        );
-        gsap.fromTo('.hero-content > *', 
-            { y: 30, autoAlpha: 0 }, 
-            { y: 0, autoAlpha: 1, stagger: 0.2, duration: 1.5, ease: 'power3.out', delay: 0.5 }
-        );
 
         /* ==========================================
-           Fade Up Reveals & Staggers
+           Fade Up Reveals
            ========================================== */
         const revealElements = document.querySelectorAll('.gs-reveal');
         
@@ -30,49 +22,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     ease: 'power3.out',
                     scrollTrigger: {
                         trigger: el,
-                        start: 'top 85%',
+                        start: 'top 85%', // trigger when top of element hits 85% down viewport
                         toggleActions: 'play none none reverse'
                     }
                 }
             );
         });
-
-        /* ==========================================
-           Cinematic Mask Reveals
-           ========================================== */
-        const maskElements = document.querySelectorAll('.gs-mask');
-        maskElements.forEach(el => {
-            gsap.to(el.querySelector('.mask-overlay'), {
-                width: '0%',
-                duration: 1.5,
-                ease: 'power4.inOut',
-                scrollTrigger: {
-                    trigger: el,
-                    start: 'top 80%',
-                    toggleActions: 'play none none none'
-                }
-            });
-            gsap.fromTo(el.querySelector('img'), 
-                { scale: 1.1 }, 
-                { scale: 1, duration: 2, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 80%' } }
-            );
-        });
-
-        /* ==========================================
-           Staggered Typography & Grid Reveals
-           ========================================== */
-        const staggerContainers = document.querySelectorAll('.gs-stagger');
-        staggerContainers.forEach(container => {
-            gsap.fromTo(container.querySelectorAll('.stagger-text'), 
-                { y: 30, autoAlpha: 0 },
-                { y: 0, autoAlpha: 1, stagger: 0.15, duration: 1, ease: 'power3.out', scrollTrigger: { trigger: container, start: 'top 85%' } }
-            );
-        });
-
-        gsap.fromTo('.stagger-amenity', 
-            { y: 50, autoAlpha: 0 },
-            { y: 0, autoAlpha: 1, stagger: 0.1, duration: 1, ease: 'power3.out', scrollTrigger: { trigger: '.amenities-grid', start: 'top 80%' } }
-        );
 
         /* ==========================================
            3D Tilt Hover Effect

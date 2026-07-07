@@ -81,22 +81,20 @@
         </div>
     </section>
 
-    <!-- About Section (Editorial Layout) -->
+    <!-- About Section -->
     <section id="about" class="about">
-        <div class="bg-watermark">KING'S COURT</div>
         <div class="container">
-            <div class="about-editorial">
-                <div class="about-image gs-reveal gs-mask">
-                    <div class="mask-overlay"></div>
-                    <img src="./asset/building image 2 .png" alt="King's Court Architecture" loading="lazy">
-                </div>
-                <div class="about-text-card gs-reveal gs-stagger">
-                    <h2 class="stagger-text">Welcome to King's Court</h2>
-                    <p class="stagger-text">Designed for those who appreciate the finer things in life, King's Court offers an unparalleled living experience. Our residences are crafted with precision, blending modern architecture with timeless elegance.</p>
-                    <p class="stagger-text">Every detail is thoughtfully curated to provide a sanctuary of comfort and luxury amidst the bustling city.</p>
-                    <div style="margin-top: 2rem;" class="stagger-text">
+            <div class="about-grid">
+                <div class="about-text gs-reveal">
+                    <h2>Welcome to King's Court</h2>
+                    <p>Designed for those who appreciate the finer things in life, King's Court offers an unparalleled living experience. Our residences are crafted with precision, blending modern architecture with timeless elegance.</p>
+                    <p>Every detail is thoughtfully curated to provide a sanctuary of comfort and luxury amidst the bustling city.</p>
+                    <div style="margin-top: 2rem;">
                         <a href="./asset/Metro_Presenter_18x12 IN_R1 copy (2).pdf" download class="btn-primary">Download Brochure</a>
                     </div>
+                </div>
+                <div class="about-image gs-reveal 3d-tilt">
+                    <img src="./asset/building image 2 .png" alt="King's Court Architecture" loading="lazy">
                 </div>
             </div>
         </div>
@@ -110,61 +108,65 @@
                 <p>Indulge in a lifestyle of supreme comfort with our curated facilities.</p>
             </div>
             
-            <div class="amenities-grid gs-reveal">
-                <!-- Amenity Items -->
-                <div class="amenity-card 3d-tilt stagger-amenity" onclick="window.openModal(this.querySelector('img').src)" style="cursor: pointer;">
-                    <div class="card-img">
-                        <img src="./asset/aminities swimming pool.png" alt="Swimming Pool" loading="lazy">
+            <div class="carousel-wrapper gs-reveal">
+                <button class="carousel-btn prev-btn" aria-label="Previous">&lt;</button>
+                <div class="carousel-track" id="amenitiesCarousel">
+                    <!-- Amenity Items -->
+                    <div class="amenity-card 3d-tilt" onclick="window.openModal(this.querySelector('img').src)" style="cursor: pointer;">
+                        <div class="card-img">
+                            <img src="./asset/aminities swimming pool.png" alt="Swimming Pool" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>Infinity Pool</h3>
+                        </div>
                     </div>
-                    <div class="card-content">
-                        <h3>Infinity Pool</h3>
+                    
+                    <div class="amenity-card 3d-tilt" onclick="window.openModal(this.querySelector('img').src)" style="cursor: pointer;">
+                        <div class="card-img">
+                            <img src="./asset/aminties the king's deck .png" alt="The King's Deck" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>The King's Deck</h3>
+                        </div>
                     </div>
-                </div>
-                
-                <div class="amenity-card 3d-tilt stagger-amenity" onclick="window.openModal(this.querySelector('img').src)" style="cursor: pointer;">
-                    <div class="card-img">
-                        <img src="./asset/aminties the king's deck .png" alt="The King's Deck" loading="lazy">
-                    </div>
-                    <div class="card-content">
-                        <h3>The King's Deck</h3>
-                    </div>
-                </div>
 
-                <div class="amenity-card 3d-tilt stagger-amenity" onclick="window.openModal(this.querySelector('img').src)" style="cursor: pointer;">
-                    <div class="card-img">
-                        <img src="./asset/aminities batmintion court.png" alt="Badminton Court" loading="lazy">
+                    <div class="amenity-card 3d-tilt" onclick="window.openModal(this.querySelector('img').src)" style="cursor: pointer;">
+                        <div class="card-img">
+                            <img src="./asset/aminities batmintion court.png" alt="Badminton Court" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>Badminton Court</h3>
+                        </div>
                     </div>
-                    <div class="card-content">
-                        <h3>Badminton Court</h3>
-                    </div>
-                </div>
 
-                <div class="amenity-card 3d-tilt stagger-amenity" onclick="window.openModal(this.querySelector('img').src)" style="cursor: pointer;">
-                    <div class="card-img">
-                        <img src="./asset/aminities football court.png" alt="Football Court" loading="lazy">
+                    <div class="amenity-card 3d-tilt" onclick="window.openModal(this.querySelector('img').src)" style="cursor: pointer;">
+                        <div class="card-img">
+                            <img src="./asset/aminities football court.png" alt="Football Court" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>Football Court</h3>
+                        </div>
                     </div>
-                    <div class="card-content">
-                        <h3>Football Court</h3>
-                    </div>
-                </div>
 
-                <div class="amenity-card 3d-tilt stagger-amenity" onclick="window.openModal(this.querySelector('img').src)" style="cursor: pointer;">
-                    <div class="card-img">
-                        <img src="./asset/aminities garden and sitting area.png" alt="Garden and Sitting Area" loading="lazy">
+                    <div class="amenity-card 3d-tilt" onclick="window.openModal(this.querySelector('img').src)" style="cursor: pointer;">
+                        <div class="card-img">
+                            <img src="./asset/aminities garden and sitting area.png" alt="Garden and Sitting Area" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>Lush Gardens</h3>
+                        </div>
                     </div>
-                    <div class="card-content">
-                        <h3>Lush Gardens</h3>
-                    </div>
-                </div>
 
-                <div class="amenity-card 3d-tilt stagger-amenity" onclick="window.openModal(this.querySelector('img').src)" style="cursor: pointer;">
-                    <div class="card-img">
-                        <img src="./asset/aminities kid's play area .png" alt="Kid's Play Area" loading="lazy">
-                    </div>
-                    <div class="card-content">
-                        <h3>Kid's Play Area</h3>
+                    <div class="amenity-card 3d-tilt" onclick="window.openModal(this.querySelector('img').src)" style="cursor: pointer;">
+                        <div class="card-img">
+                            <img src="./asset/aminities kid's play area .png" alt="Kid's Play Area" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>Kid's Play Area</h3>
+                        </div>
                     </div>
                 </div>
+                <button class="carousel-btn next-btn" aria-label="Next">&gt;</button>
             </div>
         </div>
     </section>

@@ -5,12 +5,12 @@
     /* Colors - Luxury Palette */
     --clr-primary: #C5A265; /* Elegant Gold */
     --clr-primary-dark: #A38045;
-    --clr-secondary: #7B2C28; /* Rich Maroon extracted exactly from the logo */
-    --clr-dark: #4A1A18; /* Deep Burgundy for sophisticated dark sections */
+    --clr-secondary: #1A1A1A; /* Deep Charcoal */
+    --clr-dark: #0F0F0F;
     --clr-light: #F8F9FA;
     --clr-white: #FFFFFF;
     --clr-text: #4A4A4A;
-    --clr-text-light: #E8D5D5; /* Soft reddish-grey for light text on burgundy */
+    --clr-text-light: #888888;
     
     /* Typography */
     --ff-primary: 'Outfit', sans-serif;
